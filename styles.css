@@ -93,3 +93,84 @@ hr {
     flex: 20%;
     padding: 50px;
 }
+
+
+/* styles.css */
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards wrap to the next row */
+    gap: 2rem; /* Adjust spacing between cards */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    flex: 1 1 calc(33.33% - 2rem); /* Distribute cards evenly in a row */
+    max-width: calc(33.33% - 2rem); /* Limit maximum width */
+}
+
+.card:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #3d3d3d;
+    margin-bottom: 1.5rem;
+}
+
+.card__btn {
+    display: block;
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    background-color: #195735;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card__btn span {
+    margin-left: 0.5rem;
+    transition: 0.2s;
+}
+
+.card__btn:hover,
+.card__btn:active {
+    background-color: #195735;
+}
+
+.card__btn:hover span,
+.card__btn:active span {
+    margin-left: 1rem;
+}
