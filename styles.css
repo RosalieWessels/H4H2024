@@ -30,6 +30,7 @@ li a {
     padding: 14px 30px;
     text-decoration: none;
     color: #195735;
+    font-size: 35px;
 }
 
 .last-button {
@@ -58,7 +59,6 @@ li a:hover {
 .jomhuria-regular {
     font-family: "Jomhuria", serif;
     font-weight: 400;
-    font-size: 35px;
     font-style: normal;
 }
 
