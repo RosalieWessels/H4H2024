@@ -1,0 +1,95 @@
+body {
+    background-color: #F3EBDA;
+}
+
+/* Navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding-right: 20px;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    color: #195735;
+}
+
+.last-button {
+    background-color: #195735;
+    border-radius: 15px;
+    color: white;
+}
+
+.shop-button {
+    display: block;
+    text-align: center;
+    padding: 14px 30px;
+    background-color: #195735;
+    border-color: #195735;
+    color: white;
+    border-radius: 25px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #195735;
+    border-radius: 25px;
+}
+
+/*Fonts*/
+.jomhuria-regular {
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+}
+
+.newsreader-400 {
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.newsreader-800 {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Other */
+
+hr {
+    color : #195735;
+    background-color: #195735;
+    height: 6px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 20%;
+    padding: 50px;
+}
