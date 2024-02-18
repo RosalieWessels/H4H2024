@@ -137,3 +137,269 @@ hr {
 white{
     color: white
 }
+
+/* styles.css */
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards wrap to the next row */
+    gap: 2rem; /* Adjust spacing between cards */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    flex: 1 1 calc(33.33% - 2rem); /* Distribute cards evenly in a row */
+    max-width: calc(33.33% - 2rem); /* Limit maximum width */
+}
+
+.card:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #3d3d3d;
+    margin-bottom: 0.75rem;
+}
+
+.card__btn {
+    display: block;
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    background-color: #195735;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card__btn span {
+    margin-left: 0.5rem;
+    transition: 0.2s;
+}
+
+.card__btn:hover,
+.card__btn:active {
+    background-color: #195735;
+}
+
+.card__btn:hover span,
+.card__btn:active span {
+    margin-left: 1rem;
+}
+
+.pill-button {
+    background-color: #ddd;
+    border: none;
+    color: #195735;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px; /* This creates the pill shape */
+}
+
+.sellCards{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 675px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.sellCard{
+    flex: 1;
+    background-color: #FAFAF5;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.sellCard:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.sellCard__content {
+    padding: 1.5rem;
+}
+.sellCard_header{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+}
+.sellCard_subtitle{
+    font-size: 1.10rem;
+    line-height: 1.5;
+    color: #426B1F;
+    margin-left: 10px;
+    margin-bottom: 0.75rem; 
+}
+
+.custom-select {
+    min-width: 350px;
+  }
+  
+  select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 26%;
+    font-size: 0.85rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .custom-select {
+    /* ... */
+    position: relative;
+  }
+
+  .special-card {
+    position: absolute;
+    top: 183px;
+    right: 25px;
+}
+
+
+/* text and divider for homepage */
+.green-divider {
+    border-top: 3px solid #195735; 
+    width: 20%; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+.center-text {
+    text-align: center;
+}
+.last-line {
+    font-weight: bold;
+}
+
+/* logo */
+.small-circle {
+    width: 40px;
+    height: 55px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    opacity: 0.5;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.image-on-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the image is above the circle */
+}
+
+.image-on-small-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 55px;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the image is above the circle */
+}
+  
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+  }
+  
+  .drop-container:hover {
+    background: #F3EBDA;
+    border-color: #111;
+  }
+  
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+  
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+
+  .parent {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Align items vertically */
+    justify-content: space-evenly; /* Align items horizontally */
+  }
