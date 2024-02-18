@@ -263,6 +263,7 @@ hr {
 }
 
 
+/* text and divider for homepage */
 .green-divider {
     border-top: 3px solid #195735; 
     width: 20%; 
@@ -275,6 +276,8 @@ hr {
 .last-line {
     font-weight: bold;
 }
+
+/* logo */
 .small-circle {
     width: 40px;
     height: 55px;
@@ -285,6 +288,7 @@ hr {
     margin-bottom: 20px;
     position: relative;
 }
+
 .circle {
     width: 400px;
     height: 400px;
@@ -295,10 +299,23 @@ hr {
     margin-bottom: 50px;
     position: relative;
 }
+
 .image-on-circle {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 400px,
+    height: 400px
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the image is above the circle */
+}
+
+.image-on-small-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px,
+    height: 55px
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
