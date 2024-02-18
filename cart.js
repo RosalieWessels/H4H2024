@@ -37,6 +37,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
 function getCartItems() {
     console.log("user email", email);
+    var d = 0;
     db.collection("carts").where("email", "==", email)
     .get()
     .then((querySnapshot) => {
@@ -46,20 +47,23 @@ function getCartItems() {
             items = doc.data().items;
             var len = items.length;
             console.log(items, len);
-            console.log(len)
+            arr = items;
+            console.log(len);
             for (i = 0; i < len; i++) {
-                console.log(i, items[i]);
-                
-                var imageName = items[i];
-                var spaceRef = storageRef.child(imageName);
-                spaceRef.getDownloadURL().then(function(url) {
-                    // Handle the download URL (e.g., display the image in an <img> tag)
-                    console.log('Download URL:', url);
-                    makeCards(imageName, url)
-                }).catch(function(error) {
-                    // Handle any errors
-                    console.error('Error retrieving image:', error);
-                });
+                makeCards(items[i]);
+                // console.log(i, items[i]);
+                // var imageName = items[i];
+                // var spaceRef = storageRef.child(imageName);
+                // spaceRef.getDownloadURL().then(function(url) {
+                //     // Handle the download URL (e.g., display the image in an <img> tag)
+                //     console.log('Download URL:', url);
+                //     console.log("IMAGE ID", imageName);
+                //     makeCards(arr, url, d);
+                //     d++;
+                // }).catch(function(error) {
+                //     // Handle any errors
+                //     console.error('Error retrieving image:', error);
+                // });
             }
         });
     })
@@ -107,8 +111,9 @@ function deleteFromCart(imageName) {
     });
 }
 
-function makeCards(name, url) {
-    console.log(name, url);
+function makeCards(name) {
+    // name = arr[d];
+    // console.log(name, url);
     db.collection("items").doc(name).get().then((doc) => {
         if (doc.exists) {
             console.log("Document data:", doc.data());
@@ -117,7 +122,7 @@ function makeCards(name, url) {
             cards.innerHTML += 
             `<div class="card">
                 <div class="card__content">
-                    <img class="card__img" style="height: 16rem;" src="${url}">
+                    <img class="card__img" style="height: 16rem;" src="${doc.data().url}">
                     <h1 class="card__header newsreader-800">${doc.data().title} - $${doc.data().price}</h1>
                     <p class="card__text newsreader-400" >${doc.data().description}</p>
                     <button class="login-button" onclick="deleteFromCart(${k})">Remove</button>

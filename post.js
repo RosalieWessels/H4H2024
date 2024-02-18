@@ -79,22 +79,33 @@ function uploadItem() {
       () => {
         // Upload completed successfully
         console.log("Image uploaded successfully!");
-        db.collection("items").doc(imageId).set({
-            title: title,
-            category: categoryText,
-            description: description,
-            availability: availabilityText,
-            price: Number(price),
-            image: imageId
-    
-        })
-        .then(() => {
-            console.log("Document successfully written!");
-            alert("We successfully uploaded your item!");
-            window.location.href = "shop.html";
-        })
-        .catch((error) => {
-            console.error("Error writing document: ", error);
+
+        // spaceRef = storageRef.child(imageId);
+        storageRef.getDownloadURL().then(function(url) {
+            // Handle the download URL (e.g., display the image in an <img> tag)
+            console.log('Download URL:', url);
+            db.collection("items").doc(imageId).set({
+              title: title,
+              category: categoryText,
+              description: description,
+              availability: availabilityText,
+              price: Number(price),
+              image: imageId,
+              url: url
+      
+          })
+          .then(() => {
+              console.log("Document successfully written!");
+              alert("We successfully uploaded your item!");
+              window.location.href = "shop.html";
+          })
+          .catch((error) => {
+              console.error("Error writing document: ", error);
+          });
+
+        }).catch(function(error) {
+            // Handle any errors
+            console.error('Error retrieving image:', error);
         });
 
       }
