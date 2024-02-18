@@ -260,4 +260,45 @@ hr {
     top: 183px;
     right: 25px;
 }
+
+
+        .green-divider {
+            border-top: 3px solid #195735; 
+            width: 20%; 
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+        }
+        .center-text {
+            text-align: center;
+        }
+        .last-line {
+            font-weight: bold;
+        }
+        .small-circle {
+            width: 40px;
+            height: 55px;
+            background-color: #FFFFFF;
+            border-radius: 100%;
+            opacity: 0.5;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .circle {
+            width: 400px;
+            height: 400px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            opacity: 0.5;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .image-on-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure the image is above the circle */
+        }
   
