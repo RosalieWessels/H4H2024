@@ -187,3 +187,77 @@ hr {
     cursor: pointer;
     border-radius: 16px; /* This creates the pill shape */
 }
+
+.sellCards{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 675px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.sellCard{
+    flex: 1;
+    background-color: #FAFAF5;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.sellCard:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.sellCard__content {
+    padding: 1.5rem;
+}
+.sellCard_header{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+}
+.sellCard_subtitle{
+    font-size: 1.10rem;
+    line-height: 1.5;
+    color: #426B1F;
+    margin-left: 10px;
+    margin-bottom: 0.75rem; 
+}
+
+.custom-select {
+    min-width: 350px;
+  }
+  
+  select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 26%;
+    font-size: 0.85rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .custom-select {
+    /* ... */
+    position: relative;
+  }
+
+  .special-card {
+    position: absolute;
+    top: 183px;
+    right: 25px;
+}
+  
