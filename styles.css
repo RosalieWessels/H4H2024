@@ -403,3 +403,25 @@ white{
     align-items: center; /* Align items vertically */
     justify-content: space-evenly; /* Align items horizontally */
   }
+
+.signup-button {
+    background-color: #195735;
+    border-radius: 15px;
+    color: white;
+}
+
+.input-box{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #D3D3D3;
+}
+
+.signup-box {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #D3D3D3;
+  }
