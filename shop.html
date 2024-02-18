@@ -9,21 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="createCards()">
     <center>
         <ul>
-            <li class="title jomhuria-regular">Santa Clara Swap</li>
-            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#home" class="last-button">Login</a></li> 
-            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#news">My Profile</a></li>
-            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#contact">Messages</a></li>
-            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#contact">Sell</a></li>
-            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a class="active" href="#about">Shop</a></li>
+            <li class="title jomhuria-regular" onclick="window.location.href='index.html'">Santa Clara Swap</li>
+            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="index.html" class="last-button">Login</a></li> 
+            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="signup.html">Sign Up</a></li>
+            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="">Messages</a></li>
+            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="post.html">Sell</a></li>
+            <li class="newsreader-400" style="float:right; padding-top: 10px;"><a class="active" href="shop.html">Shop</a></li>
         </ul>
 
         <hr>
 
         <ul>
-            <li class="jomhuria-regular title" style="font-size: 60px; color: black;">Furniture</li>
+            <li class="jomhuria-regular title" style="font-size: 60px; color: black;">Shop</li>
         </ul>
 
         <section class="cards" id="cards">
