@@ -42,7 +42,8 @@ li a {
 .shop-button {
     display: block;
     text-align: center;
-    padding: 14px 30px;
+    font-size: 70px; 
+    padding: 28px 60px;
     background-color: #195735;
     border-color: #195735;
     color: white;
