@@ -326,7 +326,6 @@ white{
     height: 55px;
     background-color: #FFFFFF;
     border-radius: 100%;
-    opacity: 0.5;
     margin: 0 auto;
     margin-bottom: 20px;
     position: relative;
@@ -337,7 +336,6 @@ white{
     height: 400px;
     background-color: #FFFFFF;
     border-radius: 50%;
-    opacity: 0.5;
     margin: 0 auto;
     margin-bottom: 50px;
     position: relative;
@@ -347,8 +345,8 @@ white{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
@@ -357,11 +355,12 @@ white{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
+
   
 
 .drop-container {
