@@ -74,26 +74,12 @@
                     </div>
                 </div>
         </section>
-        <section class = "cards">
-            <div class = "card special-card" >
-                <div class = "card_content">
-                    <h1 class="card__header newsreader-800">Upload Photo</h1>
-                    <p class="card__text newsreader-400" >Take clear and well-lit photos from different angles to give potential buyers a better understanding of its 
-                        condition and appearance.</p>
-                        <div class="dz-preview dz-file-preview">
-                            <div class="dz-details">
-                              <div class="dz-filename"><span data-dz-name></span></div>
-                              <div class="dz-size" data-dz-size></div>
-                              <img data-dz-thumbnail />
-                            </div>
-                            <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
-                            <div class="dz-success-mark"><span>✔</span></div>
-                            <div class="dz-error-mark"><span>✘</span></div>
-                            <div class="dz-error-message"><span data-dz-errormessage></span></div>
-                          </div>
-                          <button class="card__btn newsreader-800" >Finish and List Item in Shop<span>&rarr;</span></button>
-                </div>
-            </div>
+
+        <section>
+            <form action="/file-upload"
+            class="dropzone"
+            id="my-awesome-dropzone"></form>
+        <button class="card__btn newsreader-800" >Finish and List Item in Shop<span>&rarr;</span></button>
         </section>
     <!--</center> -->
 </body>
