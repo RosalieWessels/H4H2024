@@ -64,8 +64,6 @@ function createCard() {
     .catch((error) => {
         console.log("Error getting documents: ", error);
     });
-
-    console.log("INSIDE OF DOWNLOAD IMAGE FUNCTION");
 }
 
 
