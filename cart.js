@@ -15,6 +15,8 @@ storage = firebase.storage()
 var storageRef = firebase.storage().ref();
 
 var email = "";
+var array = [];
+var k = 0;
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -67,20 +69,35 @@ function getCartItems() {
 
 }
 
-function makeCards(name, url) {
-    console.log(name, url);
-    db.collection("items").doc(name).get().then((doc) => {
+function deleteFromCart(imageName) {
+    var docRef = db.collection("carts").doc(email);
+
+    docRef.get().then((doc) => {
         if (doc.exists) {
             console.log("Document data:", doc.data());
-            var cards = document.getElementById("cards");
-                cards.innerHTML += 
-                `<div class="card">
-                    <div class="card__content">
-                        <img class="card__img" style="height: 16rem;" src="${url}">
-                        <h1 class="card__header newsreader-800">${doc.data().title} - $${doc.data().price}</h1>
-                        <p class="card__text newsreader-400" >${doc.data().description}</p>
-                    </div>
-                </div>`
+            items=doc.data().items;
+            console.log("OLD ARRAY", items, imageName, array, array[imageName]);
+            const index = items.indexOf(array[imageName]);
+            console.log(index);
+            if (index > -1) {
+                items.splice(index, 1); // Remove one item at the specified index
+            }
+
+            console.log("NEW ARRAY", items, array, imageName)
+
+            return docRef.update({
+                items: items
+            })
+            .then(() => {
+                console.log("Document successfully updated!");
+                alert("Successfully deleted from cart!");
+                window.location.href="cart.html";
+            })
+            .catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+            
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
@@ -89,3 +106,30 @@ function makeCards(name, url) {
         console.log("Error getting document:", error);
     });
 }
+
+function makeCards(name, url) {
+    console.log(name, url);
+    db.collection("items").doc(name).get().then((doc) => {
+        if (doc.exists) {
+            console.log("Document data:", doc.data());
+            var cards = document.getElementById("cards");
+            array.push(name);
+            cards.innerHTML += 
+            `<div class="card">
+                <div class="card__content">
+                    <img class="card__img" style="height: 16rem;" src="${url}">
+                    <h1 class="card__header newsreader-800">${doc.data().title} - $${doc.data().price}</h1>
+                    <p class="card__text newsreader-400" >${doc.data().description}</p>
+                    <button class="login-button" onclick="deleteFromCart(${k})">Remove</button>
+                </div>
+            </div>`;
+            k++;
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+        }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
+}
+

@@ -66,6 +66,7 @@ function addToCart(id) {
             })
             .then(() => {
                 console.log("Document successfully updated!");
+                alert("Successfully added to cart!");
             })
             .catch((error) => {
                 // The document probably doesn't exist.
@@ -81,6 +82,7 @@ function addToCart(id) {
             })
             .then(() => {
                 console.log("Document successfully written!");
+                alert("Successfully added to cart!");
             })
             .catch((error) => {
                 console.error("Error writing document: ", error);
@@ -94,6 +96,7 @@ function addToCart(id) {
         })
         .then(() => {
             console.log("Document successfully written!");
+            alert("Successfully added to cart!");
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
