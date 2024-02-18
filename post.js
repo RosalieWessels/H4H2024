@@ -76,6 +76,8 @@ function uploadItem() {
         })
         .then(() => {
             console.log("Document successfully written!");
+            alert("We successfully uploaded your item!");
+            window.location.href = "shop.html";
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
