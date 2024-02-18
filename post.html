@@ -75,12 +75,18 @@
 
         <section>
 
-            <form>
+            <!-- <form>
                 <input type="file" id="imageInput">
-                <button onclick="uploadImage()">Upload</button>
-            </form>
+            </form> -->
+
+            <label for="imageInput" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" id="imageInput" accept="image/*" required>
+              </label>
 
         <button class="card__btn newsreader-800" onclick="uploadItem()">Finish and List Item in Shop<span>&rarr;</span></button>
+
         </section>
      <!-- Link to Firebase -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
