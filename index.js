@@ -32,7 +32,7 @@ const uid = function(){
 
 console.log(uid())
 
-function createCard() {
+function createCards() {
     db.collection("items")
     .get()
     .then((querySnapshot) => {
@@ -65,6 +65,3 @@ function createCard() {
         console.log("Error getting documents: ", error);
     });
 }
-
-
-createCard();
