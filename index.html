@@ -21,11 +21,39 @@
         .last-line {
             font-weight: bold;
         }
+        .small-circle {
+            width: 40px;
+            height: 55px;
+            background-color: #FFFFFF;
+            border-radius: 100%;
+            opacity: 0.5;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .circle {
+            width: 400px;
+            height: 400px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            opacity: 0.5;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .image-on-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure the image is above the circle */
+        }
     </style>
 </head>
 <body>
     <center>
         <ul>
+            <li class="small-circle"><img src="logo-scusw.png" class="image-on-circle" alt="Image on circle"></li>
             <li class="title jomhuria-regular">Santa Clara Swap</li>
             <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#home" class="last-button">Login</a></li> 
             <li class="newsreader-400" style="float:right; padding-top: 10px;"><a href="#news">My Profile</a></li>
@@ -38,6 +66,8 @@
 
         <h1 style="padding-top: 100px; padding-bottom: 50px; font-size: 50px;" class="newsreader-400">Connect, exchange, and sustain – </br> making Bronco life <i>greener, easier,</i> and </br> <i>brighter</i>, together.</h1>
 
+        <div class="circle"><img src="logo-scusw.png" class="image-on-circle" alt="Image on circle"></div>
+        
         <button class="shop-button jomhuria-regular">Shop Listings</button>
 
         <div class="row" style="padding-right: 100px; padding-left: 100px; padding-top: 50px;">
