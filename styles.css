@@ -143,7 +143,7 @@ hr {
     font-size: 1rem;
     line-height: 1.5;
     color: #3d3d3d;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .card__btn {
@@ -173,4 +173,17 @@ hr {
 .card__btn:hover span,
 .card__btn:active span {
     margin-left: 1rem;
+}
+
+.pill-button {
+    background-color: #ddd;
+    border: none;
+    color: #195735;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px; /* This creates the pill shape */
 }
