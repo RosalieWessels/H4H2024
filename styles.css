@@ -206,6 +206,7 @@ hr {
     cursor: pointer;
     transition: 0.2s;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 .sellCard:hover {
@@ -334,4 +335,11 @@ hr {
     font-weight: bold;
     text-align: center;
     transition: color .2s ease-in-out;
+  }
+
+  .parent {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Align items vertically */
+    justify-content: space-evenly; /* Align items horizontally */
   }
