@@ -319,7 +319,6 @@ white{
     flex: 1;
     background-color: #FAFAF5;
     border-radius: 0.4rem;
-    overflow: hidden;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     transition: 0.2s;
     border: 1px solid #000000;
@@ -437,3 +436,43 @@ white{
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
+
+.parent {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Align items vertically */
+    justify-content: space-evenly; /* Align items horizontally */
+  }
+
+  .drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+  }
+
+  .drop-container:hover {
+    background: #F3EBDA;
+    border-color: #111;
+  }
+
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
