@@ -94,6 +94,49 @@ hr {
     padding: 50px;
 }
 
+/*Sanjna's random stuff*/
+
+.loginbox{
+ 
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    background-color: #FAFAF5;
+}
+
+.jomhuria-big {
+    font-family: "Jomhuria", serif;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    font-weight: 100;
+    font-size: 60px;;
+    font-style: normal;
+}
+
+.input-box{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #D3D3D3;
+}
+
+.login-button{
+    width: 150px;
+    height: 40px;
+    background-color: #195735;
+    border-width: 0px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: white;
+    /* background-image: "Cart buttonarrow-button.png";
+    background-repeat: no-repeat;
+    background-position: right 24px center; */
+} 
+
+white{
+    color: white
+}
 
 /* styles.css */
 .cards {
@@ -283,7 +326,6 @@ hr {
     height: 55px;
     background-color: #FFFFFF;
     border-radius: 100%;
-    opacity: 0.5;
     margin: 0 auto;
     margin-bottom: 20px;
     position: relative;
@@ -294,7 +336,6 @@ hr {
     height: 400px;
     background-color: #FFFFFF;
     border-radius: 50%;
-    opacity: 0.5;
     margin: 0 auto;
     margin-bottom: 50px;
     position: relative;
@@ -304,8 +345,8 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
@@ -314,11 +355,12 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the image is above the circle */
 }
+
   
 
 .drop-container {
