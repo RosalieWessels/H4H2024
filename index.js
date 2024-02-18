@@ -19,6 +19,10 @@ firebase.initializeApp(firebaseConfig);
 db = firebase.firestore();
 storage = firebase.storage()
 
+var email = "";
+var array = [];
+var i = 0;
+
 // Get a reference to the storage service, which is used to create references in your storage bucket
 //const storage = getStorage();
 
@@ -37,6 +41,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/v8/firebase.User
     var uid = user.uid;
+    email = user.email;
     document.getElementById("login").style.display = 'none';
     document.getElementById("signup").style.display = 'none';
     document.getElementById("navbar").innerHTML = `<li class="newsreader-400" style="float:right; padding-top: 10px;" onclick="firebase.auth().signOut();"><a href="" class="last-button">Sign Out</a></li> ` + document.getElementById("navbar").innerHTML;
@@ -45,6 +50,56 @@ firebase.auth().onAuthStateChanged((user) => {
     // ...
     }
 });
+
+function addToCart(id) {
+    var docRef = db.collection("carts").doc(email);
+
+    docRef.get().then((doc) => {
+        if (doc.exists) {
+            console.log("Document data:", doc.data());
+            items = doc.data().items;
+            items.push(array[id]);
+
+            // Set the "capital" field of the city 'DC'
+            return docRef.update({
+                items: items
+            })
+            .then(() => {
+                console.log("Document successfully updated!");
+            })
+            .catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+            db.collection("carts").doc(email).set({
+                email: email,
+                items: [array[id]]
+            })
+            .then(() => {
+                console.log("Document successfully written!");
+            })
+            .catch((error) => {
+                console.error("Error writing document: ", error);
+            });
+        }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+        db.collection("carts").doc(email).set({
+            email: email,
+            items: [array[id]]
+        })
+        .then(() => {
+            console.log("Document successfully written!");
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+    });
+}
 
 function createCards() {
     db.collection("items")
@@ -58,6 +113,7 @@ function createCards() {
                 // Handle the download URL (e.g., display the image in an <img> tag)
                 console.log('Download URL:', url);
                 var cards = document.getElementById("cards");
+                array.push(doc.data().image);
                 cards.innerHTML += 
                 `<div class="card">
                     <div class="card__content">
@@ -66,9 +122,10 @@ function createCards() {
                         <p class="card__text newsreader-400" >${doc.data().description}</p>
                         <button class="pill-button">${doc.data().category}</button> 
                         <button class="pill-button">${doc.data().availability}</button>
-                        <button class="card__btn newsreader-800" style="margin-top: 10px;">Add to Cart<span>&rarr;</span></button>
+                        <button class="card__btn newsreader-800" style="margin-top: 10px;" onclick="addToCart(${i})">Add to Cart<span>&rarr;</span></button>
                     </div>
-                </div>`
+                </div>`;
+                i++;
             }).catch(function(error) {
                 // Handle any errors
                 console.error('Error retrieving image:', error);

@@ -43,6 +43,7 @@ function getCartItems() {
             console.log(doc.id, " => ", doc.data());
             items = doc.data().items;
             var len = items.length;
+            console.log(items, len);
             console.log(len)
             for (i = 0; i < len; i++) {
                 console.log(i, items[i]);
